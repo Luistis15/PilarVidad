@@ -5,24 +5,28 @@ const regalos = [
     fecha: "2025-11-11",
     contenido: `
       <h2>🎉 ¡Primer regalo desbloqueado!</h2>
-      <p>Empieza la aventura del adviento con esta imagen especial.</p>
-      <img src="https://picsum.photos/400/200?random=1" alt="Regalo 1">
+      <p>Empieza la aventura vamos a bailar con la Vaquita Paquita que nos da calorcito en la tripita </p>
+      <a href=https://www.youtube.com/watch?v=Cff5rfmaAMM>La vaca lechera.</a>
+      <p>-----</p>
+      <img src="images/vaca.jpg" alt="Primer regalo">
     `
   },
   {
     id: 2,
     nombre: "Regalo Semana 2 🎁",
-    fecha: "2025-11-18",
+    fecha: "2025-11-11",
     contenido: `
-      <h2>🍫 Dulce sorpresa</h2>
-      <p>Un mensaje para endulzar tu semana:</p>
-      <iframe width="100%" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY" title="Video sorpresa"></iframe>
+      <h2>🌈 Colores colorcitos</h2>
+      <p>Si quieres ver el mundo en tonos y flores, abre este regalo: ¡un diccionario de colores!</p>
+      <a href=https://youtu.be/Nby3UZRylok>Marisol - Tómbola </a>
+      <p>-----</p>
+      <img src="images/disccionarioDeColores.jpg" alt="Primer regalo">
     `
   },
   {
     id: 3,
     nombre: "Regalo Semana 3 🎁",
-    fecha: "2025-11-25",
+    fecha: "2025-11-16",
     contenido: `
       <h2>📜 Mensaje motivador</h2>
       <p>“No hay mejor época que la Navidad para agradecer lo que tenemos.”</p>
