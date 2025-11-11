@@ -1,19 +1,76 @@
-// Configura tus regalos con fechas específicas (una por semana)
 const regalos = [
-  { id: 1, nombre: "Regalo Semana 1 🎁", fecha: "2025-11-11" },
-  { id: 2, nombre: "Regalo Semana 2 🎁", fecha: "2025-11-18" },
-  { id: 3, nombre: "Regalo Semana 3 🎁", fecha: "2025-11-25" },
-  { id: 4, nombre: "Regalo Semana 4 🎁", fecha: "2025-12-02" },
-  { id: 5, nombre: "Regalo Semana 5 🎁", fecha: "2025-12-09" },
-  { id: 6, nombre: "Regalo Semana 6 🎁", fecha: "2025-12-16" },
-  { id: 7, nombre: "Regalo Semana 6 🎁", fecha: "2025-12-17" },
-  { id: 8, nombre: "Regalo Semana 6 🎁", fecha: "2025-12-18" }
+  {
+    id: 1,
+    nombre: "Regalo Semana 1 🎁",
+    fecha: "2025-11-11",
+    contenido: `
+      <h2>🎉 ¡Primer regalo desbloqueado!</h2>
+      <p>Empieza la aventura del adviento con esta imagen especial.</p>
+      <img src="https://picsum.photos/400/200?random=1" alt="Regalo 1">
+    `
+  },
+  {
+    id: 2,
+    nombre: "Regalo Semana 2 🎁",
+    fecha: "2025-11-18",
+    contenido: `
+      <h2>🍫 Dulce sorpresa</h2>
+      <p>Un mensaje para endulzar tu semana:</p>
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY" title="Video sorpresa"></iframe>
+    `
+  },
+  {
+    id: 3,
+    nombre: "Regalo Semana 3 🎁",
+    fecha: "2025-11-25",
+    contenido: `
+      <h2>📜 Mensaje motivador</h2>
+      <p>“No hay mejor época que la Navidad para agradecer lo que tenemos.”</p>
+    `
+  },
+  {
+    id: 4,
+    nombre: "Regalo Semana 4 🎁",
+    fecha: "2025-12-02",
+    contenido: `
+      <h2>🎶 Música navideña</h2>
+      <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+      </audio>
+    `
+  },
+  {
+    id: 5,
+    nombre: "Regalo Semana 5 🎁",
+    fecha: "2025-12-09",
+    contenido: `
+      <h2>🎬 Mini sorpresa</h2>
+      <video controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+      </video>
+    `
+  },
+  {
+    id: 6,
+    nombre: "Regalo Semana 6 🎁",
+    fecha: "2025-12-16",
+    contenido: `
+      <h2>🎄 ¡Felices fiestas!</h2>
+      <p>Gracias por acompañarnos todo este adviento. ¡Feliz Navidad!</p>
+      <img src="https://picsum.photos/400/200?random=6" alt="Regalo final">
+    `
+  }
 ];
 
 const calendario = document.getElementById("calendario");
 const contador = document.getElementById("contador");
+const modal = document.getElementById("modal");
+const contenidoModal = document.getElementById("contenido-regalo");
+const cerrarModal = document.querySelector(".cerrar");
 
-// Función para crear los cuadrados
+// Crear los cuadros del calendario
 function crearCalendario() {
   calendario.innerHTML = "";
   const hoy = new Date();
@@ -35,14 +92,19 @@ function crearCalendario() {
   });
 }
 
-// Función para mostrar mensaje al abrir regalo
+// Abrir modal con contenido
 function abrirRegalo(regalo) {
-  alert(`🎉 Has abierto: ${regalo.nombre}!`);
-  const cajas = document.querySelectorAll(".caja");
-  cajas[regalo.id - 1].classList.add("abierta");
+  contenidoModal.innerHTML = regalo.contenido;
+  modal.style.display = "block";
 }
 
-// Función para mostrar temporizador hacia el próximo regalo
+// Cerrar modal
+cerrarModal.onclick = () => (modal.style.display = "none");
+window.onclick = e => {
+  if (e.target === modal) modal.style.display = "none";
+};
+
+// Temporizador
 function actualizarContador() {
   const hoy = new Date();
   const proximo = regalos.find(r => new Date(r.fecha) > hoy);
@@ -53,16 +115,15 @@ function actualizarContador() {
   }
 
   const tiempoRestante = new Date(proximo.fecha) - hoy;
-
   const dias = Math.floor(tiempoRestante / (1000 * 60 * 60 * 24));
   const horas = Math.floor((tiempoRestante / (1000 * 60 * 60)) % 24);
   const minutos = Math.floor((tiempoRestante / (1000 * 60)) % 60);
   const segundos = Math.floor((tiempoRestante / 1000) % 60);
 
-  contador.textContent = `⏳ Próximo regalo disponible en: ${dias}d ${horas}h ${minutos}m ${segundos}s`;
+  contador.textContent = `⏳ Próximo regalo en: ${dias}d ${horas}h ${minutos}m ${segundos}s`;
 }
 
-// Inicialización
+// Iniciar
 crearCalendario();
 actualizarContador();
 setInterval(actualizarContador, 1000);
