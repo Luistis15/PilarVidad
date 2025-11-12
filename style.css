@@ -1,90 +1,73 @@
 body {
   font-family: "Poppins", sans-serif;
   background: linear-gradient(135deg, #c0392b, #8e44ad);
-  color: white;
+  color: rgb(0, 0, 0);
   text-align: center;
   margin: 0;
   padding: 0;
 }
 
-header {
-  padding: 20px;
+
+h1 {
+  margin-bottom: 30px;
 }
 
-.grid {
+.calendar {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   gap: 15px;
-  padding: 20px;
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
-.caja {
-  background-color: #ffffff22;
-  border: 2px solid white;
-  border-radius: 10px;
+.gift {
+  background: white;
+  border-radius: 12px;
   padding: 20px;
-  font-size: 1.5rem;
   cursor: pointer;
-  transition: all 0.3s;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-.caja:hover {
-  transform: scale(1.05);
-  background-color: #ffffff33;
-}
-
-.caja.bloqueada {
-  background-color: #44444466;
+.gift.locked {
+  background: #ddd;
   cursor: not-allowed;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
-.caja.abierta {
-  background-color: #27ae60;
-}
-
-/* Contador */
-.contador {
-  margin-top: 30px;
-  font-size: 1.2rem;
+.gift:hover:not(.locked) {
+  background: #ffe082;
+  transform: scale(1.05);
 }
 
 /* Modal */
 .modal {
   display: none;
   position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  overflow-y: auto;
   z-index: 10;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.7);
 }
 
 .modal-content {
-  background-color: #fff;
-  color: #333;
-  margin: 10% auto;
+  background: #fff;
+  border-radius: 15px;
+  max-width: 600px;
+  margin: 5% auto;
   padding: 20px;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 500px;
-  text-align: left;
-  position: relative;
 }
 
-.cerrar {
-  position: absolute;
-  right: 15px;
-  top: 10px;
+.close-btn {
+  float: right;
   font-size: 1.5rem;
   cursor: pointer;
 }
 
-.modal-content img, .modal-content video {
-  max-width: 100%;
-  border-radius: 8px;
+.modal-content img {
+  width: 100%;
+  border-radius: 10px;
   margin-top: 10px;
 }

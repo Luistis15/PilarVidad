@@ -1,27 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calendario de Adviento Semanal 🎄</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎁 Calendario de PilarVidad 👩🏽</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>🎁 Calendario de Adviento</h1>
-    <p>Abre un regalo nuevo cada semana</p>
-  </header>
+  <h1>🎁 Calendario de PilarVidad 👩🏽</h1>
+  <div id="calendar" class="calendar"></div>
 
-  <main>
-    <div id="calendario" class="grid"></div>
-    <div id="contador" class="contador"></div>
-  </main>
-
-  <!-- Modal para mostrar contenido de los regalos -->
-  <div id="modal" class="modal">
+  <!-- Modal -->
+  <div id="giftModal" class="modal">
     <div class="modal-content">
-      <span class="cerrar">&times;</span>
-      <div id="contenido-regalo"></div>
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <div id="giftContent"></div>
     </div>
   </div>
 
