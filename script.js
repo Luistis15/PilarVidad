@@ -124,7 +124,7 @@ function actualizarContador() {
   const minutos = Math.floor((tiempoRestante / (1000 * 60)) % 60);
   const segundos = Math.floor((tiempoRestante / 1000) % 60);
 
-  contador.textContent = `⏳ Próximo regalo en: ${dias}d ${horas}h ${minutos}m ${segundos}s`;
+  contador.textContent = `⏳⚱💨📦​ Próximo regalo en: ${dias}d ${horas}h ${minutos}m ${segundos}s`;
 }
 
 // Iniciar
