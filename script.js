@@ -26,7 +26,7 @@ const gifts  = [
   {
     id: 3,
     title: "Regalo Semana 3 🎁",
-    unlockDate: "2025-11-14T17:30:00",
+    unlockDate: "2025-11-13T21:30:00",
     content: `
       <h2>👜 Bolsito de para no perder las cositas</h2>
       <p>“Dentro caben secretos y brillo especial, adivina, adivina… ¿qué regalo tan genial?.”</p>
