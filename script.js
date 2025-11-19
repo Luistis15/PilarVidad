@@ -38,9 +38,9 @@ const gifts  = [
   {
     id: 4,
     title: "Regalo Semana 4 🎁",
-    unlockDate: "2025-12-02T18:00:00",
+    unlockDate: "2025-11-23T00:00:00",
     content: `
-      <h2>🎶 Música navideña</h2>
+      <h2>🎞️📷 Fotitos</h2>
       <audio controls>
         <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
         Tu navegador no soporta audio.
