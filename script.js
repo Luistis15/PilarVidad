@@ -38,13 +38,13 @@ const gifts  = [
   {
     id: 4,
     title: "Regalo Semana 4 🎁",
-    unlockDate: "2025-11-23T00:00:00",
+    unlockDate: "2025-11-22T00:00:00",
     content: `
       <h2>🎞️📷 Fotitos</h2>
-      <audio controls>
-        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-        Tu navegador no soporta audio.
-      </audio>
+      <p>Fotos fotitos, para que tengas los mejores recuedor amano bien bonitos🫶🫶</p>
+      <a href=https://youtu.be/v9T_MGfzq7I?si=pvVUJN77ajre0zTT>BadBunny - DtMf </a>
+      <p>-----</p>
+      <img src="images/disccionarioDeColores.jpg" alt="Librito">
     `
   },
   {
