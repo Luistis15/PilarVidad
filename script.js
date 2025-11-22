@@ -44,7 +44,7 @@ const gifts  = [
       <p>Fotos fotitos, para que tengas los mejores recuedor amano bien bonitos🫶🫶</p>
       <a href=https://youtu.be/v9T_MGfzq7I?si=pvVUJN77ajre0zTT>BadBunny - DtMf </a>
       <p>-----</p>
-      <img src="images/disccionarioDeColores.jpg" alt="Librito">
+      <img src="images/fotitos.jpeg" alt="Librito">
     `
   },
   {
