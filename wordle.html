@@ -94,51 +94,48 @@
         }
         /* Teclado */
         #keyboard {
-            margin-top: 30px;
+            margin-top: 20px;
+            width: 100%;
+            max-width: 500px;
             display: flex;
             flex-direction: column;
             gap: 8px;
-            align-items: center;
         }
 
-        .kb-row {
+        .keyboard-row {
             display: flex;
+            justify-content: center;
             gap: 6px;
         }
 
         .key {
-            background: #555;
-            color: white;
-            border: none;
-            padding: 14px 10px;
-            font-size: 18px;
-            border-radius: 6px;
-            cursor: pointer;
-            width: 40px;
-            text-align: center;
+            flex: 1;
+            padding: 12px 0;
+            font-size: 1.1rem;
             font-weight: bold;
-            transition: 0.15s ease;
+            border-radius: 6px;
+            background: #ddd;
+            border: none;
+            cursor: pointer;
+            user-select: none;
         }
 
-        .key:hover {
-            background: #777;
+        .key:active {
+            transform: scale(0.95);
         }
 
-        .big-key {
-            width: 70px;
+        .wide-key {
+            flex: 1.5;
         }
 
-        /* Colores */
-        .key.correct {
-            background: #6aaa64 !important;
-        }
-
-        .key.present {
-            background: #c9b458 !important;
-        }
-
-        .key.absent {
-            background: #3a3a3c !important;
+        @media (max-width: 480px) {
+            .key {
+                padding: 10px 0;
+                font-size: 1rem;
+            }
+            .wide-key {
+                flex: 2;
+            }
         }
     </style>
 </head>
@@ -154,8 +151,9 @@
     <!-- 🎯 TABLERO -->
     <div id="board"></div>
 
-    <div id="keyboard">
-    <div class="kb-row">
+    <!-- TECLADO VIRTUAL -->
+<div id="keyboard">
+    <div class="keyboard-row">
         <button class="key">Q</button>
         <button class="key">W</button>
         <button class="key">E</button>
@@ -168,7 +166,7 @@
         <button class="key">P</button>
     </div>
 
-    <div class="kb-row">
+    <div class="keyboard-row">
         <button class="key">A</button>
         <button class="key">S</button>
         <button class="key">D</button>
@@ -180,8 +178,8 @@
         <button class="key">L</button>
     </div>
 
-    <div class="kb-row">
-        <button class="key big-key" id="enter-key">ENTER</button>
+    <div class="keyboard-row">
+        <button class="key wide-key" data-action="enter">ENTER</button>
         <button class="key">Z</button>
         <button class="key">X</button>
         <button class="key">C</button>
@@ -189,10 +187,9 @@
         <button class="key">B</button>
         <button class="key">N</button>
         <button class="key">M</button>
-        <button class="key big-key" id="delete-key">⌫</button>
+        <button class="key wide-key" data-action="backspace">⌫</button>
     </div>
 </div>
-
 
     <script src="wordle.js"></script>
 </body>
