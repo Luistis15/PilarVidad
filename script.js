@@ -50,7 +50,7 @@ const gifts  = [
   {
     id: 5,
     title: "Regalo Semana 5 🎁",
-    unlockDate: "2025-12-09T18:00:00",
+    unlockDate: "2025-11-29T15:00:00",
     content: `
       <h2>🎬 Mini sorpresa</h2>
       <video controls>
