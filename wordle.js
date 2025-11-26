@@ -1,15 +1,12 @@
 //---------------------------------------------
 // CONFIGURACIÓN DEL JUEGO
 //---------------------------------------------
-const SOLUTION_WORD = "pilar";  // palabra correcta en minúsculas
+const DICTIONARY = window.WORDS;
+
+// y luego validar:
+const SOLUTION_WORD = "brasa";  // palabra correcta en minúsculas
 const WORD_LENGTH = 5;
 const MAX_ATTEMPTS = 6;
-
-const VALID_WORDS = [
-    "PERRO", "GATOS", "CASAS", "COCHE", "SILLA", "LLAVE",
-    "NIEVE", "PISTA", "FUEGO", "TIEMPO", "HUEVO", "METAL",
-    "CAMPO", "ARBOL", "PANES", "PILAR"
-];
 
 //---------------------------------------------
 // ELEMENTOS DEL DOM
@@ -230,11 +227,11 @@ function submitWord(word) {
     if (game.finished) return;
 
     const guess = word.toUpperCase();
-
-    if (!VALID_WORDS.includes(guess)) {
-        alert("La palabra no existe");
-        return;
-    }
+    
+    if (!DICTIONARY.includes(guess.toUpperCase())) {
+    alert('La palabra no existe');
+    return;
+}
 
     drawWordOnBoard(word, game.row);
     colorizeRow(word, game.solution, game.row);
