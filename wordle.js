@@ -4,7 +4,7 @@
 const DICTIONARY = window.WORDS;
 
 // y luego validar:
-const SOLUTION_WORD = "carne";  // palabra correcta en minúsculas
+const SOLUTION_WORD = "queso";  // palabra correcta en minúsculas
 const WORD_LENGTH = 5;
 const MAX_ATTEMPTS = 6;
 
