@@ -56,17 +56,31 @@ const gifts  = [
       <p>Queso fundido y carnea a la brasa, lo mejor para llenar nuestra panza</p>
       <a href=https://youtu.be/C7ssrLSheg4>Shakira - Loba</a>
       <p>-----</p>
-      <img src="images/quesitos.jpeg" alt="Quesitos">
+      <img src="images/quesitos.jpg" alt="Quesitos">
     `
   },
   {
     id: 6,
     title: "Regalo Semana 6 🎁",
-    unlockDate: "2025-12-16T18:00:00",
+    unlockDate: "2025-12-04T22:00:00",
     content: `
-      <h2>🎄 ¡Felices fiestas!</h2>
-      <p>Gracias por acompañarnos todo este adviento. ¡Feliz Navidad!</p>
-      <img src="https://picsum.photos/400/200?random=6" alt="Regalo final">
+      <h2>🎨 Pinturas pinturillas</h2>
+      <p>Lienzo y pinturas para sacar la artista que más me gusta</p>
+      <a href=https://youtu.be/gnPGapYC4iE>Dvicio - ARTE</a>
+      <p>-----</p>
+      <img src="images/pintar.jpg" alt="Pinturas">
+    `
+  },
+    {
+    id: 7,
+    title: "Regalo Semana 7 🎁",
+    unlockDate: "2025-12-14T20:00:00",
+    content: `
+      <h2>🎨 Pinturas pinturillas</h2>
+      <p>Lienzo y pinturas para sacar la artista que más me gusta</p>
+      <a href=https://youtu.be/gnPGapYC4iE>Dvicio - ARTE</a>
+      <p>-----</p>
+      <img src="images/pintar.jpg" alt="Pinturas">
     `
   }
 ];
