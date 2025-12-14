@@ -74,7 +74,7 @@ const gifts  = [
     {
     id: 7,
     title: "Regalo Semana 7 🎁",
-    unlockDate: "2025-12-14T20:00:00",
+    unlockDate: "2025-12-19T20:00:00",
     content: `
       <h2>🎨 Pinturas pinturillas</h2>
       <p>Lienzo y pinturas para sacar la artista que más me gusta</p>
