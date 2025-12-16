@@ -62,7 +62,7 @@ const gifts  = [
   {
     id: 6,
     title: "Regalo Semana 6 🎁",
-    unlockDate: "2025-12-04T22:00:00",
+    unlockDate: "2025-12-04T21:26:00",
     content: `
       <h2>🎨 Pinturas pinturillas</h2>
       <p>Lienzo y pinturas para sacar la artista que más me gusta</p>
